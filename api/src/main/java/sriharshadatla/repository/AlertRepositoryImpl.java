@@ -3,10 +3,13 @@ package sriharshadatla.repository;
 
 import org.springframework.stereotype.Repository;
 import sriharshadatla.entity.Alert;
+import sriharshadatla.exception.ResourceNotFoundException;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import java.io.IOException;
+import java.sql.Timestamp;
 import java.util.List;
 
 @Repository
@@ -21,8 +24,11 @@ public class AlertRepositoryImpl implements AlertsRepository {
     }
 
     public List<Alert> getAllAlerts() {
-        /*
-        TypedQuery<Alert> query = em.createNamedQuery("Alert.findAll",Alert.class);
+
+        //variable to store the value of the currenttimestamp
+        Timestamp ts = new Timestamp(System.currentTimeMillis()-7200000);
+        TypedQuery<Alert> query = em.createNamedQuery("Alert.findAllHighAlerts",Alert.class);
+        query.setParameter("paramalertTimeStamp",ts);
         List<Alert> list = query.getResultList();
         if(list!=null)
         {
@@ -30,10 +36,10 @@ public class AlertRepositoryImpl implements AlertsRepository {
         }
         else
         {
-            return null;
+            throw new ResourceNotFoundException("No Alerts are present in the database");
         }
-        */
-        return null;
+		  
+					
     }
 
     public Alert getOneAlert(String alertID) {

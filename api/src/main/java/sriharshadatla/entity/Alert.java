@@ -1,5 +1,9 @@
 package sriharshadatla.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.deser.std.DateDeserializers;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.UUID;
@@ -7,7 +11,7 @@ import java.util.UUID;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(query = "select a from Alert a order by a.alertTime desc",name = "Alert.findAll"),
+        @NamedQuery(query = "select a from Alert a where alertLevel='HIGH' and a.alertTime>:paramalertTimeStamp order by a.alertTime desc",name = "Alert.findAllHighAlerts"),
         @NamedQuery(query = "select a from Alert a where a.alertID=:paramalertID",name = "Alert.findOne")
 })
 public class Alert {
@@ -22,6 +26,7 @@ public class Alert {
     private String vin;
     private String reason;
     private String alertLevel;
+    //@JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "yyyy-MM-dd'T' HH:mm:ss.sssXXX")
     private Timestamp alertTime;//the datatype is not yet finalized, proceeding with the draft version
     private String useremail;
     public String getAlertID() {
