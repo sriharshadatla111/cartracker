@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e21a136b-1d81-4bc8-a0dd-1ed5a9f3a105" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/src/main/java/sriharshadatla/controller/CarTrackingAlertController.java" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/client/.gitkeep" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/src/main/java/sriharshadatla/entity/Alert.java" afterPath="$PROJECT_DIR$/api/src/main/java/sriharshadatla/entity/Alert.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/src/main/java/sriharshadatla/repository/AlertRepositoryImpl.java" afterPath="$PROJECT_DIR$/api/src/main/java/sriharshadatla/repository/AlertRepositoryImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/src/main/java/sriharshadatla/services/AlertHandlingService.java" afterPath="$PROJECT_DIR$/api/src/main/java/sriharshadatla/services/AlertHandlingService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/src/main/java/sriharshadatla/services/AlertHandlingServiceImpl.java" afterPath="$PROJECT_DIR$/api/src/main/java/sriharshadatla/services/AlertHandlingServiceImpl.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -570,15 +575,15 @@
       <option name="presentableId" value="Default" />
       <updated>1498722025827</updated>
       <workItem from="1498722028676" duration="2262000" />
-      <workItem from="1500583397608" duration="1139000" />
+      <workItem from="1500583397608" duration="1728000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3401000" />
+    <option name="totallyTimeSpent" value="3990000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
