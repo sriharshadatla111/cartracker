@@ -20,6 +20,7 @@ public class Reading {
     private String vin;
     private double latitude;
     private double longitude;
+    @JsonProperty("timestamp")    
     private Timestamp timestamp;
     private float fuelVolume;
     private int speed;
@@ -74,6 +75,7 @@ public class Reading {
         this.longitude = longitude;
     }
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "yyyy-MM-dd'T'HH:mm:ss.sss'Z'")    
     public Timestamp getTimestamp() {
         return timestamp;
     }
