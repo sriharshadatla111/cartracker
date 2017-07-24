@@ -22,6 +22,7 @@ public class Vehicle {
         private short year;
         private int redlineRpm;
         private int maxFuelVolume;
+        @JsonProperty("lastServiceDate")
         private Timestamp lastServiceDate;
 
 
@@ -72,7 +73,7 @@ public class Vehicle {
         public void setMaxFuelVolume(int maxFuelVolume) {
                 this.maxFuelVolume = maxFuelVolume;
         }
-
+        @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "yyyy-MM-dd'T'HH:mm:ss.sss'Z'")
         public Timestamp getLastServiceDate() {
                 return lastServiceDate;
         }
