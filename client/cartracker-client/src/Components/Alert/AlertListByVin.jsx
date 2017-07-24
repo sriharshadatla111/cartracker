@@ -67,6 +67,7 @@ class AlertsHistory extends React.Component {
 				</BootstrapTable>
 				)
 		}
+		return(<div>There is no data present</div>)
 	}
 }
 
