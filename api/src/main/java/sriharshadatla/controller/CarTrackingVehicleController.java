@@ -9,7 +9,7 @@ import sriharshadatla.entity.Vehicle;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://mocker.egen.io", maxAge = 3600)
+@CrossOrigin(origins={"http://localhost:3000","http://mocker.egen.io"},maxAge=3600)
 @RestController
 @RequestMapping("/vehicles")
 public class CarTrackingVehicleController {
