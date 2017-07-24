@@ -18,7 +18,6 @@ class AlertListByVin extends React.Component{
 		const all_alerts_of_vin_url = "http://localhost:8080/alerts/all/"+this.state.vinid
 		axios.get(all_alerts_of_vin_url)
 		     .then(function(response){
-		     	console.log(all_alerts_of_vin_url)
 		     	if(response.data)
 		     	{
 		     		self.setState({
@@ -26,7 +25,7 @@ class AlertListByVin extends React.Component{
 		     	})
 		     	}
 		     });
-		 console.log('harsha');    
+		     
 		}
 	}
 	
@@ -68,7 +67,6 @@ class AlertsHistory extends React.Component {
 				</BootstrapTable>
 				)
 		}
-		return(<h1>Harsha</h1>)
 	}
 }
 
