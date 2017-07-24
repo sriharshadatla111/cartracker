@@ -3,6 +3,7 @@ package sriharshadatla.repository;
 
 import org.springframework.stereotype.Repository;
 import sriharshadatla.entity.Alert;
+import sriharshadatla.entity.VinAlertsStatistics;
 import sriharshadatla.exception.ResourceNotFoundException;
 
 import javax.persistence.EntityManager;
@@ -38,8 +39,6 @@ public class AlertRepositoryImpl implements AlertsRepository {
         {
             throw new ResourceNotFoundException("No Alerts are present in the database");
         }
-		  
-					
     }
 
     public Alert getOneAlert(String alertID) {
@@ -57,5 +56,17 @@ public class AlertRepositoryImpl implements AlertsRepository {
             return null;
         }*/
         return null;
+    }
+
+
+    public List<Alert> getAllAlertsByVin(String vin) {
+
+        TypedQuery<Alert> query = em.createNamedQuery("Alert.findAllByVin",Alert.class);
+        query.setParameter("alertparamVin",vin);
+
+        List<Alert> list = query.getResultList();
+
+        return list!=null?list:null;
+
     }
 }
