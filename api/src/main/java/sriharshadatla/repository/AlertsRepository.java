@@ -2,17 +2,14 @@ package sriharshadatla.repository;
 
 
 import sriharshadatla.entity.Alert;
-
+import sriharshadatla.entity.VinAlertsStatistics;
 import java.util.List;
 
 public interface AlertsRepository {
 
     Alert createAlert(Alert t);
-
-
-    //These methods are not implemented correctly, saved the task for the front end
     List<Alert> getAllAlerts();
-
+    List<Alert> getAllAlertsByVin(String vin);
     Alert getOneAlert(String alertID);
 
 
