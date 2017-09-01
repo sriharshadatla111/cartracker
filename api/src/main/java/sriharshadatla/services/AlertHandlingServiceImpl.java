@@ -4,7 +4,6 @@ package sriharshadatla.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import sriharshadatla.entity.Alert;
-import sriharshadatla.entity.VinAlertsStatistics;
 import sriharshadatla.repository.AlertsRepository;
 
 import javax.persistence.EntityManager;
