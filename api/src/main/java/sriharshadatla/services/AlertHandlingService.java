@@ -3,7 +3,7 @@ package sriharshadatla.services;
 
 import org.springframework.stereotype.Component;
 import sriharshadatla.entity.Alert;
-import sriharshadatla.entity.VinAlertsStatistics;
+
 
 import java.util.List;
 @Component
