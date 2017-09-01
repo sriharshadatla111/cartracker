@@ -1,6 +1,6 @@
 package sriharshadatla.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 
 import javax.persistence.*;
