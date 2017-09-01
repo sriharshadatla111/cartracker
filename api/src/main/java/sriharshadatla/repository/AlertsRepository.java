@@ -2,7 +2,6 @@ package sriharshadatla.repository;
 
 
 import sriharshadatla.entity.Alert;
-import sriharshadatla.entity.VinAlertsStatistics;
 import java.util.List;
 
 public interface AlertsRepository {
