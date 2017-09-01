@@ -6,10 +6,12 @@ import org.springframework.web.bind.annotation.*;
 import sriharshadatla.entity.Alert;
 import sriharshadatla.entity.Reading;
 import sriharshadatla.entity.Vehicle;
+import sriharshadatla.entity.VinAlertsStatistics;
 import sriharshadatla.exception.BadRequestException;
 import sriharshadatla.exception.ResourceNotFoundException;
 import sriharshadatla.services.AlertHandlingService;
 import sriharshadatla.services.TrackingVehicleService;
+
 
 import java.util.ArrayList;
 import java.util.List;
